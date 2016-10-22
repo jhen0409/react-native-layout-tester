@@ -3,7 +3,8 @@ import {
     Dimensions,
     Text,
     TouchableOpacity,
-    View
+    View,
+    ScrollView
 } from "react-native";
 import shallowEqual from 'shallowequal';
 import LayoutProvider, { getLayout } from 'react-native-layout-provider';
@@ -146,7 +147,7 @@ export default class LayoutTester extends Component {
             );
         });
         return (
-            <View style={ [ styles.container ] }>
+            <ScrollView contentContainerStyle={ [ styles.container ] }>
                 <View style={ styles.buttons }>
                     { buttons }
                 </View>
@@ -161,7 +162,7 @@ export default class LayoutTester extends Component {
                         <Text style={ styles.button }>Rotate</Text>
                     </TouchableOpacity>
                 </View>
-            </View>
+            </ScrollView>
         );
     }
 
